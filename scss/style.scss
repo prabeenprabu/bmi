@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap");
+
+// ---variables--
+:root {
+    --dk-blue: #27374d;
+    --cyan: #526d82;
+    --lt-cyan: #9db2bf;
+    --white: #dde6ed;
+    --bg: var(--dk-blue);
+    --primary: var(--cyan);
+    --secondary: var(--lt-cyan);
+    --text: var(--white);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text);
+    font-family: "Roboto", sans-serif;
+}
+.main {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(25px);
+    min-width: 30vw;
+    padding: 1rem 1.5rem;
+    border-radius: 0.6rem;
+
+    .head {
+        font-size: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Roboto Condensed", sans-serif;
+
+        span {
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .togBut {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 0.5rem;
+
+            i {
+                position: absolute;
+            }
+        }
+    }
+
+    .body {
+        padding: 1rem 0 0 0;
+        position: relative;
+        .inputBox {
+            margin-bottom: 1.5rem;
+            position: relative;
+
+            input[type="number"]::-webkit-inner-spin-button,
+            input[type="number"]::-webkit-outer-spin-button {
+                appearance: none;
+            }
+            input {
+                width: 100%;
+                background-color: transparent;
+                border: 1.5px solid var(--secondary);
+                outline: none;
+                padding: 1rem 0.5rem 0.5rem;
+                color: var(--text);
+                border-radius: 0.56rem;
+            }
+            span {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 0 0.5rem;
+                pointer-events: none;
+                transition: 0.5s ease-in-out;
+                text-transform: uppercase;
+            }
+
+            input:valid ~ span,
+            input:focus ~ span {
+                color: var(--bg);
+                top: 0;
+                background-color: var(--text);
+                margin-left: 1rem;
+                border-radius: 0.4rem;
+            }
+        }
+
+        .btns {
+            padding: 0.5rem 1rem;
+            background-color: transparent;
+            border: 1px solid var(--secondary);
+            border-radius: 0.56rem;
+            margin-top: 1.5rem;
+            color: var(--text);
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
