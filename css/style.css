@@ -33,7 +33,10 @@ body {
   backdrop-filter: blur(25px);
   min-width: 30vw;
   padding: 1rem 1.5rem;
+  padding-bottom: 3.5rem;
   border-radius: 0.6rem;
+  position: relative;
+  overflow: hidden;
 }
 .main .head {
   font-size: 2rem;
@@ -75,7 +78,7 @@ body {
 .main .body .inputBox input {
   width: 100%;
   background-color: transparent;
-  border: 1.5px solid var(--secondary);
+  border: 1px solid var(--secondary);
   outline: none;
   padding: 1rem 0.5rem 0.5rem;
   color: var(--text);
@@ -98,6 +101,15 @@ body {
   background-color: var(--text);
   margin-left: 1rem;
   border-radius: 0.4rem;
+  letter-spacing: 0.2rem;
+}
+.main .body .ans {
+  width: 100%;
+  padding: 0.3rem 0;
+  text-align: center;
+  user-select: none;
+  text-transform: capitalize;
+  font-size: 120%;
 }
 .main .body .btns {
   padding: 0.5rem 1rem;
@@ -110,8 +122,31 @@ body {
   left: 50%;
   transform: translateX(-50%);
   transition: 0.5s ease;
+  width: 40%;
+  user-select: none;
 }
 .main .body .btns:hover {
   background-color: var(--text);
   color: var(--bg);
+}
+.main .footer {
+  background-color: var(--primary);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-transform: capitalize;
+  user-select: none;
+  cursor: pointer;
+}
+.main .footer p {
+  margin: 0;
+  text-align: center;
+  padding: 0.3rem 0;
+}
+
+@media screen and (max-width: 400px) {
+  .main {
+    min-width: 90%;
+  }
 }/*# sourceMappingURL=style.css.map */
