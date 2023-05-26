@@ -30,6 +30,8 @@ document.querySelector(".footer").addEventListener("click", () => {
 });
 
 // ---bmi calulate----
+let ans = document.querySelector(".ans span");
+let an = document.querySelector(".ans");
 document.querySelector(".btns").addEventListener("click", () => {
     let ht = document.querySelector("#height").value;
     let wt = document.querySelector("#weight").value;
@@ -37,6 +39,18 @@ document.querySelector(".btns").addEventListener("click", () => {
         let m = ht / 100;
         let m2 = m * m;
         let res = wt / m2;
-        alert(res);
+        if (res < 18.5) {
+            ans.innerText = "under weight";
+            an.style.backgroundColor = "#219ebc";
+        } else if (res >= 18.5 && res <= 24.9) {
+            ans.innerText = "normal weight";
+            an.style.backgroundColor = "#40916c";
+        } else if (res >= 25 && res <= 29.9) {
+            ans.innerText = "over weight";
+            an.style.backgroundColor = "#e76f51";
+        } else if (res >= 30) {
+            ans.innerText = "obesity";
+            an.style.backgroundColor = "#e63946";
+        }
     }
 });
