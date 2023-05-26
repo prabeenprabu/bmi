@@ -24,3 +24,19 @@ sun.addEventListener("click", () => {
     document.querySelector(".main").style.backgroundColor =
         "rgba(255, 255, 255, 0.3)";
 });
+// ------to my account----
+document.querySelector(".footer").addEventListener("click", () => {
+    window.open("https://www.instagram.com/prabeen_ragupathi/", "_blank");
+});
+
+// ---bmi calulate----
+document.querySelector(".btns").addEventListener("click", () => {
+    let ht = document.querySelector("#height").value;
+    let wt = document.querySelector("#weight").value;
+    if (ht > 0 && wt > 0) {
+        let m = ht / 100;
+        let m2 = m * m;
+        let res = wt / m2;
+        alert(res);
+    }
+});
